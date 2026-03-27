@@ -12,8 +12,11 @@ spec:
       labels:
         app: transaction-service
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
-      - name: transaction-service
-        image: andypagadala/transaction-service:v1
-        ports:
-        - containerPort: 5000
+        - name: transaction-service
+          image: 494459347674.dkr.ecr.us-east-1.amazonaws.com/transaction-service:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
