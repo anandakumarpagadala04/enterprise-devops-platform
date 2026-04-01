@@ -9,8 +9,8 @@ resource "aws_ecr_repository" "transaction_service_tf" {
 
 resource "aws_vpc" "devops_vpc" {
   cidr_block           = "10.0.0.0/16"
-  enable_dns_support   = true
   enable_dns_hostnames = true
+  enable_dns_support   = true
 
   tags = {
     Name = "devops-project-vpc"
@@ -67,6 +67,13 @@ resource "aws_security_group" "devops_sg" {
   }
 
   ingress {
+    from_port   = 5001
+    to_port     = 5001
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
@@ -92,8 +99,16 @@ resource "aws_instance" "devops_server" {
   vpc_security_group_ids      = [aws_security_group.devops_sg.id]
   associate_public_ip_address = true
 
+  user_data = <<-EOF
+              #!/bin/bash
+              yum update -y
+              amazon-linux-extras install docker -y
+              service docker start
+              usermod -a -G docker ec2-user
+              docker run -d -p 5001:5000 andypagadala/transaction-service:latest
+              EOF
+
   tags = {
     Name = "devops-project-server"
   }
 }
-
