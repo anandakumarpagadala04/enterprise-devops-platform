@@ -1,6 +1,6 @@
-# 🚀 Enterprise DevOps Platform
+## Enterprise DevOps Platform
 
-## 📌 Overview
+## Overview
 
 This project showcases a production-grade Enterprise DevOps Platform built using AWS, Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, Prometheus, and Grafana.
 
@@ -10,37 +10,37 @@ The core application is a Python-based Transaction Microservice that exposes RES
 
 ---
 
-## 🏗 Key Implementations
+## Key Implementations
 
-### ✅ Infrastructure as Code (Terraform)
+### Infrastructure as Code (Terraform)
 
 * Provisioned AWS VPC, Subnet, Route Tables, Internet Gateway, and Security Groups
 * Created and managed EC2 instances using Terraform
 * Configured AWS ECR repository for container image storage
 * Verified infrastructure state using `terraform plan` and `terraform apply`
 
-### ✅ Containerization (Docker)
+### Containerization (Docker)
 
 * Built Docker image for Python Flask Transaction Service
 * Managed container lifecycle using Docker
 * Exposed application securely using EC2 public IP and custom ports
 * Validated deployment using live API requests
 
-### ✅ CI/CD Automation (GitHub Actions + Jenkins)
+### CI/CD Automation (GitHub Actions + Jenkins)
 
 * Implemented GitHub Actions workflows for automated build and deployment
 * Configured Jenkins pipelines for deployment automation
 * Automated Docker image build and push to container registry
 * Reduced manual deployment effort and improved release consistency
 
-### ✅ Kubernetes Deployment (K8s / EKS / KIND)
+### Kubernetes Deployment (K8s / EKS / KIND)
 
 * Deployed application using Kubernetes Deployment and Service manifests
 * Configured multiple running pods for high availability
 * Implemented NodePort and Port Forwarding for service exposure
 * Validated Kubernetes deployment using live GET and POST API requests
 
-### ✅ Monitoring & Observability (Prometheus + Grafana)
+### Monitoring & Observability (Prometheus + Grafana)
 
 * Integrated Prometheus for metrics collection
 * Configured Node Exporter for infrastructure monitoring
@@ -49,7 +49,7 @@ The core application is a Python-based Transaction Microservice that exposes RES
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * AWS (EC2, ECR, VPC, Security Groups)
 * Terraform
@@ -66,7 +66,7 @@ The core application is a Python-based Transaction Microservice that exposes RES
 
 ---
 
-## 🏛 Architecture Flow
+## Architecture Flow
 
 Developer → Git Push → GitHub Actions → Jenkins Pipeline → Docker Build → Container Registry → Kubernetes Deployment → AWS EC2 / Cluster → Prometheus Monitoring → Grafana Dashboard
 
@@ -74,7 +74,7 @@ This architecture simulates a real-world enterprise DevOps workflow used in prod
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 enterprise-devops-platform/
@@ -90,7 +90,7 @@ enterprise-devops-platform/
 
 ---
 
-## ⚙️ Application Features
+## Application Features
 
 * Transaction creation using REST APIs
 * Health check endpoint for service validation
@@ -102,7 +102,7 @@ enterprise-devops-platform/
 
 ---
 
-## 🚀 Deployment Validation
+## Deployment Validation
 
 ### GET Request
 
@@ -138,7 +138,7 @@ This confirms successful end-to-end deployment across infrastructure, containers
 
 ---
 
-## 📊 Monitoring Dashboard
+## Monitoring Dashboard
 
 Grafana dashboards provide visibility into:
 
@@ -153,7 +153,7 @@ Prometheus continuously collects infrastructure and application metrics for oper
 
 ---
 
-## 💡 Real-World Challenges Solved
+## Real-World Challenges Solved
 
 * Docker port conflicts during deployment
 * GitHub Actions deployment workflow failures
@@ -167,7 +167,7 @@ These challenges provided strong hands-on experience similar to real production 
 
 ---
 
-## 🎯 Business Impact
+## Business Impact
 
 This project demonstrates how DevOps improves:
 
@@ -183,7 +183,7 @@ This reflects the same principles used in enterprise-scale DevOps and Site Relia
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 * ArgoCD GitOps deployment
 * Blue-Green / Canary deployment strategies
@@ -194,7 +194,7 @@ This reflects the same principles used in enterprise-scale DevOps and Site Relia
 
 ---
 
-## 👨‍💻 Author
+## Author
 
 Ananda Kumar Pagadala
 DevOps Engineer | AWS Cloud | SRE | Platform Engineering
